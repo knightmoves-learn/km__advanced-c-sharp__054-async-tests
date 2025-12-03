@@ -2,8 +2,8 @@ using System.Reflection;
 
 public class LessonTests
 {
-    private static string Lesson53FilePath = @"../../../Lesson53Tests/DecryptionAuditService.Tests.cs";
-    private string Lesson53Content = File.ReadAllText(Lesson53FilePath);
+    private static string Lesson54FilePath = @"../../../Lesson54Tests/DecryptionAuditService.Tests.cs";
+    private string Lesson54Content = File.ReadAllText(Lesson54FilePath);
     private readonly string[] _requiredTestMethods =
     {
         "ShouldLog_WhenValueDecrypted",
