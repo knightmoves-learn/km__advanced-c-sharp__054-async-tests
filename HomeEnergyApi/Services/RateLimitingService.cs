@@ -14,7 +14,7 @@ namespace HomeEnergyApi.Services
             dateTime = dateTimeWrapper;
         }
 
-        public bool IsRequestAllowed(string clientKey)
+        public virtual bool IsRequestAllowed(string clientKey)
         {
             if (!_requests.ContainsKey(clientKey))
             {
