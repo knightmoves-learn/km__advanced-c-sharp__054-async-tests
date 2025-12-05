@@ -46,8 +46,7 @@ public class RateLimitingMiddlewareTest
         Assert.Equal(StatusCodes.Status200OK, _expectedHttpContext.Response.StatusCode);
 
         Assert.Equal(1, _stubLogger.LoggedDebugMessages.Count);
-        Assert.Equal("Starting middleware", _stubLogger.LoggedDebugMessages[0]);
-        Assert.Equal("Calling next middleware", _stubLogger.LoggedDebugMessages[1]);
+        Assert.Equal("RateLimitingMiddleware Started", _stubLogger.LoggedDebugMessages[0]);
     }
 
     [Fact]
@@ -69,6 +68,6 @@ public class RateLimitingMiddlewareTest
         Assert.Equal(StatusCodes.Status429TooManyRequests, _expectedHttpContext.Response.StatusCode);
         
         Assert.Single(_stubLogger.LoggedDebugMessages);
-        Assert.Equal("Starting middleware", _stubLogger.LoggedDebugMessages[0]);
+        Assert.Equal("RateLimitingMiddleware Started", _stubLogger.LoggedDebugMessages[0]);
     }
 }
