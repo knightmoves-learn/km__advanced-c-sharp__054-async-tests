@@ -2,11 +2,12 @@ using System.Reflection;
 
 public class LessonTests
 {
-    private static string Lesson54FilePath = @"../../../Lesson54Tests/DecryptionAuditService.Tests.cs";
+    private static string Lesson54FilePath = @"../../../Lesson54Tests/RateLimitingMiddlewareTest.cs";
     private string Lesson54Content = File.ReadAllText(Lesson54FilePath);
     private readonly string[] _requiredTestMethods =
     {
-        "ShouldLog_WhenValueDecrypted",
+        "ShouldCallNextMiddleware_WhenRateLimitNotExceeded",
+        "ShouldReturn429_WhenRateLimitExceeded"
     };
 
     [Fact]
